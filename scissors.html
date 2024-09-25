@@ -12,7 +12,7 @@
             justify-content: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            background-color: aqua;
+            background-color: rgb(136, 0, 255);
             margin: 0;
         }
 
@@ -21,7 +21,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.666);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -52,28 +52,52 @@
             font-size: 18px;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
+            background-color: #9d00ff;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #6800b3;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #b6bec7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #788390;
         }
 
     </style>
 </head>
 <body>
+    <button class="back-btn" onclick="goBack()" role="button">Regresar</button>
     <div id="container">
         <div id="user">Jugador: </div>
-        <img id="imgUser" src="papel.png" alt="Imagen del usuario"/>
+        <img id="imgUser" src="papel.jpg" alt="Papel seleccionado por el jugador" />
         <div id="maq">Máquina: </div>
-        <img id="imgMaq" src="piedra.png" alt="Imagen de la máquina"/>
+        <img id="imgMaq" src="piedra.jpg" alt="Piedra seleccionada por la máquina" />
         <div id="message"></div>
         <button id="btnPlay">Jugar</button>
     </div>
-    
-    <script src="./scissors.js"></script>
+
+    <script src="./scissors.js" defer></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>

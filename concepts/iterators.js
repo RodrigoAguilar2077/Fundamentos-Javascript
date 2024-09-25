@@ -16,7 +16,7 @@ calculator(15, 9, resta);
 calculator(15, 9, (a, b) => a * b);
 calculator(15, 9, (a, b) => a / b);
 
-const foods =['tamales', 'pizza', 'chiaquiles', 'pozole', 'tacos', 'maruchan']
+const foods2 =['tamales', 'pizza', 'chiaquiles', 'pozole', 'tacos', 'maruchan']
 
 foods.forEach(food => console.log(food));
 foods.forEach(food => console.log(food.length));
@@ -38,7 +38,7 @@ const sdoof = foods.map(food => {
 
 console.log(sdoof);
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const cuadrado = numbers.map(num => num ** 2);
 const cubo = numbers.map(num => num ** 3);
@@ -55,7 +55,7 @@ function wrappedGift(gifts){
         return `${tapa}\n*${gift}*\n${tapa}`;
     });
 }
-const foods =['tamales', 'pizza', 'chiaquiles', 'pozole', 'tacos', 'maruchan']
+const foods3 =['tamales', 'pizza', 'chiaquiles', 'pozole', 'tacos', 'maruchan']
 const wrappedFoods = wrappedGift(foods);
 wrappedFoods.forEach(food => console.log(food));
 
