@@ -26,11 +26,11 @@ const play = () => {
             break;
         case 1:
             choiceMaq = 'papel';
-            imgMaq.src = 'imagenes/papel.jpg';
+            imgMaq.src = 'papel.jpg';
             break;
         case 2:
             choiceMaq = 'tijeras';
-            imgMaq.src = 'imagenes/tijeras.jpg';
+            imgMaq.src = 'tijeras.jpg';
             break;
     }
 
@@ -51,7 +51,7 @@ const play = () => {
     }
 
     divUser.innerText = `Usuario: ${choiceUser}`;
-    imgUser.src = `imagenes/${choiceUser}.png`;
+    imgUser.src = `${choiceUser}.jpg`;
     imgUser.style.display = 'block'; 
 }
 
