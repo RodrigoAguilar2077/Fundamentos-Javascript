@@ -37,7 +37,6 @@
             width: 100px;
             height: auto;
             margin: 10px;
-            display: none;
         }
 
         #message {
@@ -86,18 +85,18 @@
     <button class="back-btn" onclick="goBack()" role="button">Regresar</button>
     <div id="container">
         <div id="user">Jugador: </div>
-        <img id="imgUser" src="papel.jpg" alt="Papel seleccionado por el jugador" />
+        <img id="imgUser" src="" alt="Opción seleccionada por el jugador" />
         <div id="maq">Máquina: </div>
-        <img id="imgMaq" src="piedra.jpg" alt="Piedra seleccionada por la máquina" />
+        <img id="imgMaq" src="" alt="Opción seleccionada por la máquina" />
         <div id="message"></div>
         <button id="btnPlay">Jugar</button>
     </div>
 
-    <script src="./scissors.js" defer></script>
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
+    <script src="./scissors.js" defer></script>
 </body>
 </html>

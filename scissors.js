@@ -5,8 +5,16 @@ const message = document.getElementById('message');
 const imgUser = document.getElementById('imgUser');
 const imgMaq = document.getElementById('imgMaq');
 
+const opcionesValidas = ['piedra', 'papel', 'tijeras'];
+
 const play = () => {
-    const choiceUser = prompt('Elige: piedra, papel o tijeras').toLowerCase();
+    let choiceUser = prompt('Elige: piedra, papel o tijeras').toLowerCase();
+
+    if (!opcionesValidas.includes(choiceUser)) {
+        alert('Opción inválida. Por favor, elige entre piedra, papel o tijeras.');
+        return;
+    }
+
     const aleatorio = Math.floor(Math.random() * 3);
     
     let choiceMaq;
@@ -14,15 +22,15 @@ const play = () => {
     switch (aleatorio) {
         case 0:
             choiceMaq = 'piedra';
-            imgMaq.src = 'imagenes/piedra.png';
+            imgMaq.src = 'piedra.jpg';
             break;
         case 1:
             choiceMaq = 'papel';
-            imgMaq.src = 'imagenes/papel.png';
+            imgMaq.src = 'imagenes/papel.jpg';
             break;
         case 2:
             choiceMaq = 'tijeras';
-            imgMaq.src = 'imagenes/tijera.png';
+            imgMaq.src = 'imagenes/tijeras.jpg';
             break;
     }
 
@@ -43,7 +51,7 @@ const play = () => {
     }
 
     divUser.innerText = `Usuario: ${choiceUser}`;
-    imgUser.src = `imagenes/imagen_${choiceUser}.png`; 
+    imgUser.src = `imagenes/${choiceUser}.png`;
     imgUser.style.display = 'block'; 
 }
 
